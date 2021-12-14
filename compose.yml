@@ -6,7 +6,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./statify-data:/data/db:rw
+      - ./statify-data-staging:/data/db:rw
     logging:
       driver: "none"
 
@@ -18,7 +18,7 @@ services:
     depends_on: 
       - mongo
     environment:
-      - DB_URL=mongodb://mongo:27017/statify
+      - DB_URL=mongodb://mongo:27017/statify-staging
 
   frontend:
     build: frontend

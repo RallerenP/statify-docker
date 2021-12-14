@@ -1,9 +1,10 @@
 FROM node:14.18.1-buster
 
 RUN \
-  echo "**** Pulling from git ****" && \
+  echo "**** Pulling from git & checkout to staging ****" && \
   cd / && \
   git clone https://github.com/RallerenP/statify.git && \
+  git checkout staging && \
   echo "**** Installing Dependencies ****" && \
   cd statify/frontend && \
   yarn install && \
