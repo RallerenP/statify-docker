@@ -1,0 +1,29 @@
+version: "3.0"
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./statify-data:/data/db:rw
+    logging:
+      driver: "none"
+
+  backend:
+    build: backend
+    command: /start
+    ports:
+      - 3000:3000
+    depends_on: 
+      - mongo
+    environment:
+      - DB_URL=mongodb://mongo:27017/statify
+
+  frontend:
+    build: frontend
+    command: /start
+    ports:
+      - 5000:5000
+    depends_on:
+      - backend
