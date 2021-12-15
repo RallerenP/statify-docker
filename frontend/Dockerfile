@@ -4,9 +4,9 @@ RUN \
   echo "**** Pulling from git & checkout to staging ****" && \
   cd / && \
   git clone https://github.com/RallerenP/statify.git && \
+  cd /statify/frontend && \
   git checkout staging && \
   echo "**** Installing Dependencies ****" && \
-  cd statify/frontend && \
   yarn install && \
   echo "**** Building Statify Frontend ****" && \
   yarn build && \
