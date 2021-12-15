@@ -4,13 +4,12 @@ RUN \
   echo "**** Pulling from git ****" && \
   cd / && \
   git clone https://github.com/RallerenP/statify.git && \
-  cd statify/backend && \
-  git checkout staging && \
   echo "**** Installing Dependencies ****" && \
+  cd statify/backend && \
   yarn install && \
   echo "**** Building Statify Backend ****" && \
   yarn build && \
   echo "**** Creating Start Script ****" && \
   cd / && \ 
-  echo "cd /statify/backend && yarn start" >> start && \
+  echo "cd /statify/backend && git pull && yarn install && yarn build && yarn start" >> start && \
   chmod +x start
