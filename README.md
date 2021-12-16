@@ -7,8 +7,11 @@ Build and compose files to run the 'Statify' project.
 ## .env
 
 ``GIT_BRANCH`` - Branch to checkout when building statify project.
+
 ``MONGO_PORT`` *optional* - Public port to access the database. Default: 27017
+
 ``BACKEND_PORT`` *optional* - Public port to access the backend api. Default: 3000
+
 ``FRONTEND_PORT`` *optional* - Public port to access the frontend. Default: 5000
 
 ## .env.frontend
