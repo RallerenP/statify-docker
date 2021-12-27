@@ -5,8 +5,6 @@ services:
     image: mongo
     volumes:
       - ${DATA_DIR:-./statify-data}:/data/db:rw
-    logging:
-      driver: "none"
 
   backend:
     build: backend
