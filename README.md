@@ -10,13 +10,9 @@ Build and compose files to run the 'Statify' project.
 
 ``SECRET`` - Secret code to enable admin access for logged in user. Make this complex.
 
-``MONGO_PORT`` *optional* - Public port to access the database. Default: 27017
-
 ``BACKEND_PORT`` *optional* - Public port to access the backend api. Default: 3000
 
 ``FRONTEND_PORT`` *optional* - Public port to access the frontend. Default: 5000
-
-
 
 ## .env.frontend
 
